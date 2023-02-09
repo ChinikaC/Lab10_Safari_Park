@@ -26,8 +26,8 @@ CREATE TABLE animals(
 INSERT INTO animals(name, type, age, enclosure_id) VALUES ('Tony', 'Bengal Tiger', 16,1);
 INSERT INTO animals(name, type, age, enclosure_id) VALUES ('Simba', 'Congo Lion', 8,1);
 INSERT INTO animals(name, type, age, enclosure_id) VALUES ('Mbaku', 'Silver Back Gorilla', 10,2);
-INSERT INTO animals(name, type, age, enclosure_id) VALUES ('George', 'Golden Sunb Nosed Monkey', 12,2);
-INSERT INTO animals(name, type, age, enclosure_id) VALUES ('Yoshi', 'Komodo Drago', 14,3);
+INSERT INTO animals(name, type, age, enclosure_id) VALUES ('George', 'Golden Snub Nosed Monkey', 12,2);
+INSERT INTO animals(name, type, age, enclosure_id) VALUES ('Yoshi', 'Komodo Dragon', 14,3);
 INSERT INTO animals(name, type, age, enclosure_id) VALUES ('Malfoy', 'Rock Python', 6,3);
 
 CREATE TABLE staff(
@@ -57,8 +57,8 @@ INSERT INTO assignment(employee_id, enclosure_id, day) VALUES (4,2,'Thursday');
 INSERT INTO assignment(employee_id, enclosure_id, day) VALUES (5,3,'Friday');
 INSERT INTO assignment(employee_id, enclosure_id, day) VALUES (6,3,'Saturday');
 
--- select animal names from monkey enclosure:
--- select animals.name from enclosures inner join animals on enclosures.id = animals.enclosure_id where enclosures.name = 'Monkey House';
+-- Q1: Write a query to find the names of the animals in a given enclosure.
+-- A: SELECT animals.name FROM enclosures INNER JOIN animals ON enclosures.id = animals.enclosure_id WHERE enclosures.name = 'Monkey House';
 
--- Select the names of the staff in a given enclosure:
--- Select staff.name FROM enclosures inner join assignment on enclosures.id = assignment.enclosure_id inner join staff on assignment.employee_id = staff.id where enclosures.name = 'Big Cat Field';
+-- Q2: Write a query to find the names of the staff in a given enclosure.
+-- A: SELECT staff.name FROM enclosures INNER JOIN assignment ON enclosures.id = assignment.enclosure_id INNER JOIN staff ON assignment.employee_id = staff.id WHERE enclosures.name = 'Big Cat Field';
