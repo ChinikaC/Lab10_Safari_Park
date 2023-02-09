@@ -20,15 +20,15 @@ CREATE TABLE animals(
     name VARCHAR(40),
     type VARCHAR(40),
     age INT,
-    enclosures_id INT REFERENCES enclosures(id)
+    enclosure_id INT REFERENCES enclosures(id)
 );
 
-INSERT INTO animals(name, type, age, enclosures_id) VALUES ('Tony', 'Bengal Tiger', 16,1);
-INSERT INTO animals(name, type, age, enclosures_id) VALUES ('Simba', 'Congo Lion', 8,1);
-INSERT INTO animals(name, type, age, enclosures_id) VALUES ('Mbaku', 'Silver Back Gorilla', 10,2);
-INSERT INTO animals(name, type, age, enclosures_id) VALUES ('George', 'Golden Sunb Nosed Monkey', 12,2);
-INSERT INTO animals(name, type, age, enclosures_id) VALUES ('Yoshi', 'Komodo Drago', 14,3);
-INSERT INTO animals(name, type, age, enclosures_id) VALUES ('Malfoy', 'Rock Python', 6,3);
+INSERT INTO animals(name, type, age, enclosure_id) VALUES ('Tony', 'Bengal Tiger', 16,1);
+INSERT INTO animals(name, type, age, enclosure_id) VALUES ('Simba', 'Congo Lion', 8,1);
+INSERT INTO animals(name, type, age, enclosure_id) VALUES ('Mbaku', 'Silver Back Gorilla', 10,2);
+INSERT INTO animals(name, type, age, enclosure_id) VALUES ('George', 'Golden Sunb Nosed Monkey', 12,2);
+INSERT INTO animals(name, type, age, enclosure_id) VALUES ('Yoshi', 'Komodo Drago', 14,3);
+INSERT INTO animals(name, type, age, enclosure_id) VALUES ('Malfoy', 'Rock Python', 6,3);
 
 CREATE TABLE staff(
 id SERIAL PRIMARY KEY,
@@ -46,13 +46,13 @@ INSERT INTO staff(name, employeeNumber) VALUES ('Eddison', 026);
 CREATE TABLE assignment(
 id SERIAL PRIMARY KEY,
 employee_id INT REFERENCES staff(id),
-enclosures_id INT REFERENCES enclosures(id),
+enclosure_id INT REFERENCES enclosures(id),
 day VARCHAR(20)
 );
 
-INSERT INTO assignment(employee_id, enclosures_id, day) VALUES (1,1,'Monday');
-INSERT INTO assignment(employee_id, enclosures_id, day) VALUES (2,1,'Tuesday');
-INSERT INTO assignment(employee_id, enclosures_id, day) VALUES (3,2,'Wednesday');
-INSERT INTO assignment(employee_id, enclosures_id, day) VALUES (4,2,'Thursday');
-INSERT INTO assignment(employee_id, enclosures_id, day) VALUES (5,3,'Friday');
-INSERT INTO assignment(employee_id, enclosures_id, day) VALUES (6,3,'Saturday');
+INSERT INTO assignment(employee_id, enclosure_id, day) VALUES (1,1,'Monday');
+INSERT INTO assignment(employee_id, enclosure_id, day) VALUES (2,1,'Tuesday');
+INSERT INTO assignment(employee_id, enclosure_id, day) VALUES (3,2,'Wednesday');
+INSERT INTO assignment(employee_id, enclosure_id, day) VALUES (4,2,'Thursday');
+INSERT INTO assignment(employee_id, enclosure_id, day) VALUES (5,3,'Friday');
+INSERT INTO assignment(employee_id, enclosure_id, day) VALUES (6,3,'Saturday');
