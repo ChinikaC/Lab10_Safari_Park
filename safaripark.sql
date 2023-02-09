@@ -12,7 +12,7 @@ CREATE TABLE enclosures(
 );
 
 INSERT INTO enclosures(name, capacity,closedForMaintenance) VALUES ('Big Cat Field', 30, true);
-INSERT INTO enclosures(name, capacity,closedForMaintenance) VALUES ('Moneky House', 40, false);
+INSERT INTO enclosures(name, capacity,closedForMaintenance) VALUES ('Monkey House', 40, false);
 INSERT INTO enclosures(name, capacity,closedForMaintenance) VALUES ('Vivarium', 35, true);
 
 CREATE TABLE animals(
