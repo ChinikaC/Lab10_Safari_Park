@@ -60,5 +60,5 @@ INSERT INTO assignment(employee_id, enclosure_id, day) VALUES (6,3,'Saturday');
 -- select animal names from monkey enclosure:
 -- select animals.name from enclosures inner join animals on enclosures.id = animals.enclosure_id where enclosures.name = 'Monkey House';
 
--- Select the name(s) of the staff in a given enclosure:
+-- Select the names of the staff in a given enclosure:
 -- Select staff.name FROM enclosures inner join assignment on enclosures.id = assignment.enclosure_id inner join staff on assignment.employee_id = staff.id where enclosures.name = 'Big Cat Field';
